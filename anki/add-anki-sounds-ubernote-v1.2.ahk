@@ -1,3 +1,13 @@
+
+; search with the traditional mandarin field
+
+
+
+
+
+
+
+
 #Requires AutoHotkey v2.0															
 
 brakes := 100 ;needed for the thing to work
@@ -67,33 +77,12 @@ quicksearch(){
 	Sleep waitforwindow
 	Send '{Enter}'
 }
-;
-^u::{
-    search(1)
-}
-;
-^i::{
-    search(2)
-}
-;
-^o::{
-    search(3)
-}
-;
-^p::{
-    search(4)
-}
-;
-^2::{
-    search(2)
-}
-;
 
 ;confirm searched audio and go next
 ^k::{
 Send '{LShift down}`t{LShift up}{Enter}'
 Sleep brakes
-gonext(6)
+gonext(9)
 }
 
 ;cancel audio search and go next
@@ -110,3 +99,37 @@ gonext(4)
 	Send '{Up}'
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^j::{
+tab(9)
+Sleep brakes
+
+Send '{Home}'
+Sleep brakes
+
+Send '{LShift down}'
+Sleep brakes
+
+Send '{End}'
+Sleep brakes
+
+Send '{LShift up}'
+Sleep brakes
+
+
+quicksearch()
+}
